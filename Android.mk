@@ -6,88 +6,55 @@ include $(CLEAR_VARS)
 BUSYBOX_TOOLS := \
 	[ \
 	[[ \
-	acpid \
-	add-shell \
-	addgroup \
-	adduser \
 	adjtimex \
 	ar \
+	arch \
 	arp \
 	arping \
 	ash \
 	awk \
 	base64 \
 	basename \
-	bash \
-	beep \
+	bbconfig \
+	bc \
+	blkdiscard \
 	blkid \
 	blockdev \
-	bootchartd \
 	brctl \
 	bunzip2 \
 	bzcat \
 	bzip2 \
 	cal \
-	cat \
-	catv \
-	chat \
 	chattr \
 	chgrp \
-	chmod \
-	chown \
-	chpasswd \
-	chpst \
 	chroot \
 	chrt \
-	chvt \
 	cksum \
-	clear \
-	cmp \
 	comm \
-	cp \
 	cpio \
-	crond \
-	crontab \
-	cryptpw \
-	cttyhack \
 	cut \
-	date \
 	dc \
-	dd \
-	deallocvt \
-	delgroup \
-	deluser \
-	depmod \
 	devmem \
-	df \
-	dhcprelay \
 	diff \
 	dirname \
-	dmesg \
 	dnsd \
 	dnsdomainname \
 	dos2unix \
-	du \
-	dumpkmap \
-	dumpleases \
+	dpkg \
+	dpkg-deb \
 	echo \
 	ed \
 	egrep \
 	eject \
 	env \
-	envdir \
-	envuidgid \
 	ether-wake \
 	expand \
 	expr \
-	fakeidentd \
+	factor \
 	false \
+	fatattr \
 	fbset \
-	fbsplash \
-	fdflush \
-	fdformat \
 	fdisk \
-	fgconsole \
 	fgrep \
 	find \
 	findfs \
@@ -96,116 +63,78 @@ BUSYBOX_TOOLS := \
 	free \
 	freeramdisk \
 	fsck \
-	fsck.minix \
+	fsfreeze \
+	fstrim \
 	fsync \
 	ftpd \
 	ftpget \
 	ftpput \
 	fuser \
 	getopt \
-	getty \
-	grep \
 	groups \
 	gunzip \
 	gzip \
-	halt \
-	hd \
 	hdparm \
 	head \
 	hexdump \
-	hostid \
+	hexedit \
 	hostname \
 	httpd \
 	hwclock \
-	id \
-	ifconfig \
-	ifdown \
-	ifenslave \
-	ifplugd \
-	ifup \
+	i2cdetect \
+	i2cdump \
+	i2cget \
+	i2cset \
+	i2ctransfer \
 	inetd \
-	init \
-	insmod \
 	install \
-	ionice \
 	iostat \
 	ip \
 	ipaddr \
 	ipcalc \
-	ipcrm \
-	ipcs \
 	iplink \
+	ipneigh \
 	iproute \
 	iprule \
 	iptunnel \
-	kbd_mode \
-	kill \
 	killall \
 	killall5 \
-	klogd \
-	last \
 	less \
-	linux32 \
-	linux64 \
-	linuxrc \
-	ln \
-	loadfont \
-	loadkmap \
-	logger \
-	login \
+	link \
 	logname \
-	logread \
 	losetup \
-	lpd \
-	lpq \
-	lpr \
-	ls \
 	lsattr \
-	lsmod \
 	lspci \
+	lsscsi \
 	lsusb \
 	lzcat \
 	lzma \
 	lzop \
 	lzopcat \
 	makedevs \
-	makemime \
 	man \
 	md5sum \
-	mdev \
-	mesg \
 	microcom \
-	mkdir \
 	mkdosfs \
 	mke2fs \
 	mkfifo \
-	mkfs.ext2 \
-	mkfs.minix \
-	mkfs.vfat \
-	mknod \
-	mkpasswd \
-	mkswap \
 	mktemp \
 	modinfo \
 	modprobe \
 	more \
-	mount \
 	mountpoint \
 	mpstat \
-	mt \
-	mv \
-	nameif \
 	nbd-client \
 	nc \
-	netstat \
 	nice \
+	nl \
 	nmeter \
-	nohup \
-	nslookup \
+	nologin \
+	nproc \
 	ntpd \
 	od \
-	openvt \
-	passwd \
+	partprobe \
+	paste \
 	patch \
 	pgrep \
 	pidof \
@@ -215,83 +144,53 @@ BUSYBOX_TOOLS := \
 	pivot_root \
 	pkill \
 	pmap \
-	popmaildir \
-	poweroff \
 	powertop \
-	printenv \
 	printf \
-	ps \
 	pscan \
 	pstree \
 	pwd \
 	pwdx \
-	raidautorun \
 	rdate \
 	rdev \
-	readahead \
-	readlink \
-	readprofile \
 	realpath \
-	reboot \
-	reformime \
-	remove-shell \
-	renice \
 	reset \
 	resize \
 	rev \
-	rm \
-	rmdir \
-	rmmod \
-	route \
-	rpm \
+	rfkill \
 	rpm2cpio \
 	rtcwake \
+	run-init \
 	run-parts \
-	runlevel \
-	runsv \
-	runsvdir \
 	rx \
 	script \
 	scriptreplay \
 	sed \
-	sendmail \
 	seq \
-	setarch \
-	setconsole \
-	setfont \
-	setkeycodes \
-	setlogcons \
+	setfattr \
+	setpriv \
 	setserial \
 	setsid \
-	setuidgid \
 	sh \
 	sha1sum \
 	sha256sum \
+	sha3sum \
 	sha512sum \
-	showkey \
-	slattach \
-	sleep \
+	shred \
+	shuf \
 	smemcap \
-	softlimit \
 	sort \
 	split \
-	start-stop-daemon \
+	ssl_client \
 	stat \
 	strings \
 	stty \
-	sulogin \
 	sum \
-	sv \
-	svlogd \
-	swapoff \
-	swapon \
 	switch_root \
-	sync \
 	sysctl \
-	syslogd \
 	tac \
 	tail \
 	tar \
+	tc \
 	tcpsvd \
 	tee \
 	telnet \
@@ -301,56 +200,50 @@ BUSYBOX_TOOLS := \
 	tftpd \
 	time \
 	timeout \
-	top \
-	touch \
 	tr \
 	traceroute \
 	traceroute6 \
 	true \
+	truncate \
+	ts \
 	tty \
 	ttysize \
 	tunctl \
-	udhcpc \
-	udhcpd \
+	tune2fs \
 	udpsvd \
-	umount \
+	uevent \
 	uname \
 	uncompress \
 	unexpand \
 	uniq \
 	unix2dos \
+	unlink \
 	unlzma \
 	unlzop \
 	unxz \
 	unzip \
-	uptime \
-	users \
 	usleep \
 	uudecode \
 	uuencode \
 	vconfig \
 	vi \
-	vlock \
 	volname \
-	wall \
 	watch \
-	watchdog \
 	wc \
 	wget \
 	which \
-	who \
 	whoami \
 	whois \
 	xargs \
+	xxd \
 	xz \
 	xzcat \
 	yes \
-	zcat \
-	zcip
+	zcat
 
 LOCAL_MODULE := busybox
 
-BUSYBOX_INSTALL_DIR := $(TARGET_OUT)/bin
+BUSYBOX_INSTALL_DIR := $(TARGET_OUT)/xbin
 BUSYBOX_BINARY := $(BUSYBOX_INSTALL_DIR)/busybox
 BUSYBOX_LOCAL_BINARY := $(LOCAL_PATH)/busybox-android
 # This dependency ensures busybox is installed after all toolbox symlinks
